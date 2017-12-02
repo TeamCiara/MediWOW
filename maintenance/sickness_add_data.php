@@ -3,12 +3,11 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
 	// variables for input data
-	$Medicine_Name = $_POST['Medicine_Name'];
-	$Description = $_POST['Description'];
+	$sickness_Name = $_POST['sickness_Name'];
 	// variables for input data
 	
 	// sql query for inserting data into database
-	$sql_query = "INSERT INTO medicines(medicine_name,medicine_description) VALUES('$Medicine_Name','$Description')";
+	$sql_query = "INSERT INTO sickness(sickness_name) VALUES('$sickness_Name')";
 	// sql query for inserting data into database
 	
 	// sql query execution function
@@ -20,7 +19,7 @@ if(isset($_POST['btn-save']))
 		?>
 		<script type="text/javascript">
 		alert('Data Are Inserted Successfully ');
-		window.location.href='../maintenance/maintenance_index.php';
+		window.location.href='../maintenance/sickness_maintenance_index.php';
 		</script>
 		<?php
 	}
@@ -47,7 +46,7 @@ if(isset($_POST['btn-save']))
 
 <div id="header">
 	<div id="content">
-    <label>Medicine Maintenance Screen</a></label>
+    <label>sickness Maintenance Screen</a></label>
     </div>
 </div>
 <div id="body">
@@ -55,13 +54,10 @@ if(isset($_POST['btn-save']))
     <form method="post">
     <table align="center">
     <tr>
-    <td align="center"><a href="../maintenance/maintenance_index.php">back to main page</a></td>
+    <td align="center"><a href="../maintenance/sickness_maintenance_index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="Medicine_Name" placeholder="Medicine Name" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="Description" placeholder="Description" required /></td>
+    <td><input type="text" name="sickness_Name" placeholder="sickness Name" required /></td>
     </tr>
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>

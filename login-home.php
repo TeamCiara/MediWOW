@@ -22,7 +22,10 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
 <p><a href='change-pwd.php'>Change password</a></p>
 
-<p><a href='../MediWOWProject/maintenance/maintenance_index.php'>Maintenance</a></p>
+<p><a href='../MediWOW/maintenance/maintenance_index.php'>Add Medicine</a></p>
+<p><a href='../MediWOW/maintenance/sickness_maintenance_index.php'>Add Sickness</a></p>
+<p><a href='../MediWOW/maintenance/symptoms_maintenance_index.php'>Add Symptoms</a></p>
+<p><a href='../MediWOW/maintenance/prescription_maintenance_index.php'>Add Prescriptions</a></p>
 <br><br><br>
 <p><a href='logout.php'>Logout</a></p>
 </div>

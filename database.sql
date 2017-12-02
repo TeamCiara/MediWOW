@@ -44,24 +44,27 @@ CREATE TABLE symptoms(
 	PRIMARY KEY  (symptom_id)
 );
 
-CREATE TABLE sickness(
-	sickness_id int(11) NOT NULL auto_increment,
-	sickness_name varchar(100) NOT NULL,
-	symptom_id  int(11) NOT NULL,
-	PRIMARY KEY  (sickness_id)
-);
-
 CREATE TABLE prescription(
 	prescription_id int(11) NOT NULL auto_increment,
 	symptom_id  int(11) NOT NULL,
 	medicine_id int(11) NOT NULL,
+	sickness_id int(11) NOT NULL,
 	PRIMARY KEY  (prescription_id)
 );
+
+CREATE TABLE sickness(
+	sickness_id int(11) NOT NULL auto_increment,
+	sickness_name varchar(100) NOT NULL,
+	PRIMARY KEY  (sickness_id)
+);
+
+
 
 
 INSERT INTO `symptoms`(`symptom_name`) VALUES ('Sneezing');
 INSERT INTO `symptoms`(`symptom_name`) VALUES ('Runny Nose');
 INSERT INTO `medicines`(`medicine_name`, `medicine_description`) VALUES ('Neozep','Phenylephrine HCI Chlorphenamine Meleate Paracetamol');
-INSERT INTO `prescription`(`symptom_id`, `medicine_id`) VALUES (1, 1);
-INSERT INTO `prescription`(`symptom_id`, `medicine_id`) VALUES (2, 1);
+INSERT INTO sickness (sickness_name) VALUES('Colds');
+INSERT INTO `prescription`(`symptom_id`, `medicine_id`, sickness_id) VALUES (1, 1, 1);
+INSERT INTO `prescription`(`symptom_id`, `medicine_id`, sickness_id) VALUES (2, 1, 1);
 

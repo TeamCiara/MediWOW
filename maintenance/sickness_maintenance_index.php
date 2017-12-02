@@ -5,7 +5,7 @@ include_once 'dbconfig.php';
 if(isset($_GET['delete_id']))
 {
 	echo "<p>DELETE " . $_GET['delete_id'] . "</p>";
-	$sql_query="DELETE FROM medicines WHERE Medicine_id=".$_GET['delete_id'];
+	$sql_query="DELETE FROM sickness WHERE sickness_id=".$_GET['delete_id'];
 	$res = mysql_query($sql_query);
 	if(!$res){
 		echo "delete error";
@@ -33,7 +33,7 @@ function edt_id(id)
 {
 	if(confirm('Sure to edit ?'))
 	{
-		window.location.href='edit_data.php?edit_id='+id;
+		window.location.href='sickness_edit_data.php?edit_id='+id;
 	}
 }
 function delete_id(id)
@@ -41,7 +41,7 @@ function delete_id(id)
 	console.log("id is " + id);
 	if(confirm('Sure to Delete ?'))
 	{
-		window.location.href='maintenance_index.php?delete_id=' + id;
+		window.location.href='sickness_maintenance_index.php?delete_id=' + id;
 	}
 }
 </script>
@@ -63,15 +63,13 @@ function delete_id(id)
 	<div id="content">
     <table align="center">
     <tr>
-    <th colspan="5"><a href="add_data.php">ADD MEDICINES</a></th>
+    <th colspan="5"><a href="sickness_add_data.php">ADD SICKNESS</a></th>
     </tr>
-    <th>Medicine ID</th>
-    <th>Medicine Name</th>
-    <th>Description</th>
-    <th colspan="2">Operations</th>
+    <th>Sickness ID</th>
+    <th>Sickness Name</th>
     </tr>
     <?php
-	$sql_query="SELECT * FROM medicines";
+	$sql_query="SELECT * FROM sickness";
 	$result_set=mysql_query($sql_query);
 	if(mysql_num_rows($result_set)>0)
 	{
@@ -81,7 +79,6 @@ function delete_id(id)
             <tr>
             <td><?php echo $row[0]; ?></td>
             <td><?php echo $row[1]; ?></td>
-            <td><?php echo $row[2]; ?></td>
             <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
             <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
             </tr>

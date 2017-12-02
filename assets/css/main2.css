@@ -1,0 +1,53 @@
+body {
+    background-color: lightblue !important;
+    //background: #312450 !important;
+}
+
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+/*background colors*/
+.bg-1 {
+    background-color: #9932CC; /* Green */
+    color: #ffffff;
+}
+.bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+.bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+}
+
+/*pop-up message before submitting symptoms*/
+.w3-container {
+    background-color: lightblue;
+    color: #555555;
+    /*max-width:980px;margin:auto;*/
+    
+}
+
+
+
+#intro {
+    
+}
+#section1header {
+    font-family: lobster;
+}
+#symptomHeader {
+    font-family: montserrat;
+}
+#symptomText {
+    color: lightslategrey;
+}
+/*
+#messageBox {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+*/
+

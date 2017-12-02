@@ -2,19 +2,18 @@
 include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
-	$sql_query="SELECT * FROM medicines WHERE Medicine_id=".$_GET['edit_id'];
+	$sql_query="SELECT * FROM sickness WHERE sickness_id=".$_GET['edit_id'];
 	$result_set=mysql_query($sql_query);
 	$fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
 {
 	// variables for input data
-	$Medicine_Name = $_POST['Medicine_Name'];
-	$Description = $_POST['Description'];
+	$Sickness_Name = $_POST['Sickness_Name'];
 	// variables for input data
 	
 	// sql query for update data into database
-	$sql_query = "UPDATE medicines SET Medicine_Name='$Medicine_Name',Medicine_Description='$Description' WHERE Medicine_id=".$_GET['edit_id'];
+	$sql_query = "UPDATE sickness SET Sickness_Name='$Sickness_Name' WHERE sickness_id=".$_GET['edit_id'];
 	// sql query for update data into database
 	
 	// sql query execution function
@@ -23,7 +22,7 @@ if(isset($_POST['btn-update']))
 		?>
 		<script type="text/javascript">
 		alert('Data Are Updated Successfully');
-		window.location.href='../maintenance/maintenance_index.php';
+		window.location.href='../maintenance/sickness_maintenance_index.php';
 		</script>
 		<?php
 	}
@@ -39,7 +38,7 @@ if(isset($_POST['btn-update']))
 }
 if(isset($_POST['btn-cancel']))
 {
-	header("Location: ../maintenance/maintenance_index.php");
+	header("Location: ../maintenance/sickness_maintenance_index.php");
 
 }
 ?>
@@ -64,10 +63,7 @@ if(isset($_POST['btn-cancel']))
     <form method="post">
     <table align="center">
     <tr>
-    <td><input type="text" name="Medicine_Name" placeholder="Medicine Name" value="<?php echo $fetched_row['Medicine_Name']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td><input type="text" name="Description" placeholder="Description" value="<?php echo $fetched_row['Description']; ?>" required /></td>
+    <td><input type="text" name="Sickness_Name" placeholder="Sickness Name" value="<?php echo $fetched_row['Sickness_Name']; ?>" required /></td>
     </tr>
     <tr>
     <td>
