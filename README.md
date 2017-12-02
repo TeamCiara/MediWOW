@@ -1,1 +1,4 @@
-# MediWOW
+MediWOW is an application that aims to provide a quick, efficient, and accessible way to Hospitals and Pharmacy throughout the contry via use of database and IoT.
+it is a web app where the user will input his/her conditions and symptoms, the AI or database will try to determine all possible causes based on the symptoms. in case the cause cannot be determined via database, the app will then try to connect the user to the nearest local hospital doctor for a short chat to determine the possible cause.
+once the cause of the symptoms are determined, the list of medical drugs and where the closest drugstore is. 
+in case a personal or physical examination is required in order to determine the cause the connected doctor can set an scheduled check up for a different time or have the check up the same day
