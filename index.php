@@ -131,7 +131,7 @@
                 <h1 id="section1header" class="">You have...</h1>
                 <br />
                 <ul>
-                    <li>Diarrhea</li>
+                    <li>Flu</li>
                 </ul>
                 </div>
             <br/>
