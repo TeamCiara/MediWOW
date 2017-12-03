@@ -1,39 +1,7 @@
+
 //get value of add symptom text field
-
-document.getElementById('addSymptomButton').addEventListener("click", function () {
-    var symptomText = document.getElementById('symptomText');
-    /*if (symptomText.value === '') {
-        alert("Please enter the symptom!");
-    }
-    else {
-        document.getElementById('myList').innerHTML += symptomText.value + "<br/>";
-    //}*/
-  
-    
-});
-
-//submit
-/*
-document.getElementById("yesSubmitSymptomsButton").addEventListener("click", function () {
-    alert("Do you want to submit it?");
-});
-*/
-
-/*
-//create new checkbox upon adding
-function addCheckBox(name){
-    var checkbox = document.createElement('input'); 
-    checkbox.type= 'checkbox';
-    checkbox.name = name;
-    //checkbox.id = id;
-    //checkbox.value = value;
-    return checkbox;
-}
-
-*/
-
 document.getElementById("addSymptomButton").addEventListener("click", function () {
-    console.log("YYOOOWW");
+    //console.log("YYOOOWW");
     var checkbox = document.createElement('input');
     //checkbox.setAttribute('type', 'checkbox');
     checkbox.type= 'checkbox';
@@ -50,46 +18,12 @@ document.getElementById("addSymptomButton").addEventListener("click", function (
     
     document.getElementById("check_symptoms").appendChild(labell);
     document.getElementById("check_symptoms").appendChild(document.createElement("br"));
+   
+   //clear text field 
     document.getElementById('symptomText').value = "";
 });
 
-//clear text field
-function ClearFields() {
-    document.getElementById("symptomText").value = "";
-}
-
-/*
-//get checked value for display
-function checkedSymptoms() {
-    var checkSymptom = document.forms[0];
-    var txt = "";
-    var alreadyClicked = [];
-    var i;
-    
-    
-    for (i = 0; i < checkSymptom.length; i++) {
-        if (checkSymptom[i].checked && alreadyClicked[i] == false) {
-            txt = checkSymptom[i].value;
-            document.getElementById('pText').innerHTML += txt;
-            console.log(txt);
-        }
-    }
-    */
-    
-    /*
-    for (i = 0; i < checkSymptom.length; i++) {
-        if (checkSymptom[i].checked) {
-            txt = checkSymptom[i].value;
-            document.getElementById('pText').innerHTML += txt;
-            console.log(txt);
-        }
-    }
-    
-}*/
-
-
 //get checked value (all)
-
 function checkedSymptoms() {
     var checkSymptom = document.forms[0];
     var txt = "";
@@ -124,3 +58,6 @@ function onChangee(){
             symptoms_list.removeChild(li_symptom);
         }
 }
+
+
+

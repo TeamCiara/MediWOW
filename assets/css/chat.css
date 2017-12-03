@@ -1,0 +1,45 @@
+#minimize {
+	position: fixed;
+	display: block;
+	bottom: 0;
+	right: 0;
+}
+
+#maximize {
+	position: fixed;
+	display: block;
+	width: 200px;
+	height: 300px;
+	bottom: 0;
+	right: 0;
+	border: 1px solid black;
+	z-index: 5;
+}
+
+#header, #minimize2 {
+	background-color: #50B1C3;
+	font-family: "Montserrat";
+    color: white;
+}
+
+#bbody {
+	display: block;
+	width: 100%;
+	height: 100%;
+    background-color: #CAE9EB;
+}
+
+#minimize2 {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	display: block;
+	width: 200px;
+	
+}
+
+#chat {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}

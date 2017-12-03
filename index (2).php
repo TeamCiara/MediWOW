@@ -47,7 +47,7 @@
                 <section>
                 <!-- Home Button -->
                 <div class="text-right">
-                    <a id="login" type="button" href="login-home.php" class="btn btn-lg btn-danger">Login</a>
+                    <a id="login" type="button" href="#intro" class="btn btn-lg btn-danger">Login</a>
                 </div>
                     <div class="col-md-3"></div>
                     <div class="col-md-6">

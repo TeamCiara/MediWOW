@@ -7,17 +7,14 @@ if(isset($_GET['delete_id']))
 	echo "<p>DELETE " . $_GET['delete_id'] . "</p>";
 	$sql_query="DELETE FROM prescription WHERE prescription_id=".$_GET['delete_id'];
 	$res = mysql_query($sql_query);
-	if(!$res){
+	/*if(!$res){
 		echo "delete error";
 	}
 	else {
 		echo "deleted successfully";
-	}
+	}*/
 	
 	header("Location: $_SERVER[PHP_SELF]");
-}
-else{
-	echo "<p>NOt set</p>";
 }
 // delete condition
 

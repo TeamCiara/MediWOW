@@ -16,9 +16,6 @@ if(isset($_GET['delete_id']))
 	
 	header("Location: $_SERVER[PHP_SELF]");
 }
-else{
-	echo "<p>NOt set</p>";
-}
 // delete condition
 
 ?>
